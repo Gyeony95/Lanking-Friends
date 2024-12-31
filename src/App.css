@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-color: #f9f6e6;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
 }
 
 .App-logo {
@@ -14,14 +20,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #bad8b6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #8d77ab;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .App-link {
@@ -35,4 +43,133 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+input, select, button {
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #8d77ab;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  background-color: #e1eacd;
+  color: #8d77ab;
+}
+
+input:focus, select:focus {
+  border-color: #005bb5;
+  outline: none;
+}
+
+button {
+  background: #8d77ab;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+li {
+  background-color: #e1eacd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  color: #8d77ab;
+}
+
+li:hover {
+  transform: translateY(-5px);
+}
+
+.item-card {
+  background-color: #e1eacd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  color: #8d77ab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.confirm-button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.confirm-button:hover {
+  background-color: #4cae4c;
+}
+
+.cancel-button {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #ec971f;
 }

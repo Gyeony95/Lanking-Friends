@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "랭킹 꼴지",
+  "name": "랭킹 꼴지 어서오고",
   "icons": [
     {
       "src": "favicon.ico",
