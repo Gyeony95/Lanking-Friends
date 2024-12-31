@@ -32,36 +32,17 @@ function ItemForm({
         </div>
       ))}
       <button onClick={addItemField} style={{ marginTop: '10px' }}>항목 추가</button>
-      <h2>응답자 수</h2>
-      <input
-        type="number"
-        value={respondentCount}
-        onChange={(e) => setRespondentCount(e.target.value)}
-        min="1"
-        max="10"
-      />
-      <h2>응답자 이름</h2>
+      <h2>인성 측정 대상</h2>
       {respondents.map((respondent, index) => (
         <input
           key={index}
           type="text"
           value={respondent}
           onChange={(e) => handleRespondentChange(index, e.target.value)}
-          placeholder={`응답자 ${index + 1}`}
+          placeholder={`친구이름 ${index + 1}`}
         />
       ))}
-      <button onClick={addRespondent}>응답자 추가</button>
-      <h2>추가된 항목들</h2>
-      <ul style={{ padding: 0 }}>
-        {items.map((item, index) => (
-          <li key={index} style={{ marginBottom: '10px', listStyleType: 'none' }}>
-            {item.name} ({item.type})
-            <button onClick={() => deleteItem(index)} className="delete-button" style={{ marginLeft: '10px' }}>
-              삭제
-            </button>
-          </li>
-        ))}
-      </ul>
+      <button onClick={addRespondent}>대상자 추가</button>     
       <button onClick={saveItems} className="complete-button">
         완료
       </button>
