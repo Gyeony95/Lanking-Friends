@@ -15,7 +15,7 @@ function ItemForm({
 }) {
   return (
     <header className="App-header">
-      <h1>랭킹 꼴지 어서오고</h1>
+      <h1>너의 인성 랭킹은?</h1>
       <h2>항목 추가</h2>
       {itemFields.map((item, index) => (
         <div key={index} style={{ width: '100%', display: 'flex', gap: '10px', alignItems: 'center' }}>
