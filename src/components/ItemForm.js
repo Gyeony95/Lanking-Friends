@@ -18,7 +18,7 @@ function ItemForm({
       <h1>너의 인성 랭킹은?</h1>
       <h2>항목 추가</h2>
       {itemFields.map((item, index) => (
-        <div key={index} style={{ width: '100%', display: 'flex', gap: '10px', alignItems: 'center' }}>
+        <div key={index} style={{ width: '100%', display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '10px' }}>
           <input
             type="text"
             onChange={(e) => handleItemChange(index, 'name', e.target.value)}
@@ -52,11 +52,11 @@ function ItemForm({
       ))}
       <button onClick={addRespondent}>응답자 추가</button>
       <h2>추가된 항목들</h2>
-      <ul>
+      <ul style={{ padding: 0 }}>
         {items.map((item, index) => (
-          <li key={index} className="item-card">
+          <li key={index} style={{ marginBottom: '10px', listStyleType: 'none' }}>
             {item.name} ({item.type})
-            <button onClick={() => deleteItem(index)} className="delete-button">
+            <button onClick={() => deleteItem(index)} className="delete-button" style={{ marginLeft: '10px' }}>
               삭제
             </button>
           </li>
